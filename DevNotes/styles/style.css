@@ -1,0 +1,191 @@
+/* GLOBAL STYLES */
+
+:root {
+    --bg-color: #202124 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: none;
+    list-style: none;
+
+    font-family: Helvetica;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+/* HEADER */
+
+header {
+    border-bottom: 1px solid #CCC;
+    padding: 1rem 2rem;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#search-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#search {
+    background-color: #525356;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    color: #DDD;
+    width: 400px;
+}
+
+#search::placeholder {
+    color: #DDD;
+}
+
+#export-notes {
+    background-color: #333;
+    border: 2px solid #FFF;
+    border-radius: 4px;
+    color: #FFF;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#export-notes:hover {
+    background-color: #FFF;
+    color: #333;
+}
+
+/* FORM ADD NOTE */
+
+.add-note-container {
+    display: flex;
+    width: 400px;
+    margin: 1rem auto 0;
+    gap: 1rem;
+}
+
+.add-note-container input,
+.add-note-container button {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.add-note-container input {
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid #525356;
+    color: #FFF;
+}
+
+.add-note-container button {
+    cursor: pointer;
+    background-color: #333;
+    color: #FFF;
+}
+
+/* NOTES */
+
+#notes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.note {
+    min-height: 200px;
+    padding: 1rem;
+    border: 1px solid #CCC;
+    background-color: #202124;
+    border-radius: 10px;
+    color: #FFF;
+    position: relative;
+}
+
+.note textarea {
+    background-color: transparent;
+    resize: none;
+    color: #FFF;
+    border: none;
+    height: 100%;
+    outline: none;
+}
+
+.note .bi-pin {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 1.2rem;
+    background-color: #333;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.note .bi-x-lg,
+.note .bi-file-earmark-plus {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 0.9rem;
+    padding: 5px;
+    transition: 0.3s;
+    color: #555;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.note .bi-file-earmark-plus {
+    top: 40px;
+}
+
+.note .bi-x-lg:hover,
+.note .bi-file-earmark-plus:hover {
+    color: #FFF;
+}
+
+.note:hover > i {
+    opacity: 1;
+}
+
+.note.fixed {
+    background-color: #3C3C3F;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 450px){
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    #search-container {
+        width: 100%;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+    .add-note-container {
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    #notes-container {
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+}
+
