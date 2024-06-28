@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+    font-family: Verdana;
+}
+
+body, html {
+    height: 1500px;
+}
+
+h2 {
+    margin-bottom: 1.6rem;
+    text-align: center;
+    color: #333;
+}
+
+#box-shadow-generator {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.controls-container,
+.preview {
+    flex: 1;
+    padding: 2rem;
+}
+
+
+
+.form-box {
+    display: flex;
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px dashed #CCC;
+}
+
+.form-box label {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.range-input {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.range-input input[type="range"] {
+    appearance: none;
+    width: 100%;
+    height: 24px;
+    background-color: #D3D3D3;
+    outline: none;
+}
+
+.range-input input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background-color: #E9D60A;
+    cursor: pointer;
+}
+
+.reference-input {
+    display: flex;
+    align-items: center;
+}
+
+.reference-input p {
+    margin-left: 4px;
+}
+
+.reference-input input[type="text"] {
+    height: 30px;
+    width: 30px;
+    margin-left: 1rem;
+    text-align: center;
+}
+
+#color-value {
+    min-width: 100px;
+}
+
+#opacity-value {
+    width: 40px;
+}
+
+
+#inset {
+    align-self: start;
+    height: 20px;
+    width: 20px;
+}
+
+
+
+
+.box {
+    width: 100%;
+    height: 300px;
+    background-color: #E9D60A;
+}
+
+
+
+#generate-rule {
+    text-align: center;
+}
+
+#generate-rule p {
+    margin-bottom: 0.5rem;
+}
+
+#rules-area {
+    background-color: #D3D3D3;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 2px solid #E9D60A;
+    padding: 1rem;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+#rules-area:hover {
+    background-color: #DFDFDF;
+}
+
+#copy-instructions {
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+
+
+@media (max-width: 425px) {
+    #controls-container,
+    #preview {
+      padding: 1rem 2rem;
+    }
+  
+    #box-shadow-generator {
+      flex-direction: column;
+    }
+  
+    #box {
+      width: 60%;
+      height: 200px;
+      margin: 0 auto;
+    }
+  
+    #generated-rule {
+      margin-top: 1.5rem;
+    }
+  }
